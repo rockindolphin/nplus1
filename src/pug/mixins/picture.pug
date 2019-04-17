@@ -1,0 +1,23 @@
+-
+	var sizes = [576, 768, 992, 1200],
+		imgFolder = 'images/',
+		webp = false;
+
+mixin picture(opts)
+	- var name = path.parse(opts.src).name
+	- var ext = path.parse(opts.src).ext.substr(1)
+	- var alt = opts.alt ? opts.alt : name;
+	- var className = opts.class;
+	- var data = opts.data ? opts.data : '';
+	picture
+		each size in sizes
+			if webp
+				source(srcset=`${imgFolder}${name}-${size}.webp` type="image/webp" media=`(max-width: ${size}px) and (orientation: landscape)`)
+			source(srcset=`${imgFolder}${name}-${size}.${ext}` type=`image/${ext}` media=`(max-width: ${size}px) and (orientation: landscape)`)
+		if webp
+			source(srcset=`${imgFolder}${name}-portrait.webp` type="image/webp" media=`(orientation: portrait)`)
+		source(srcset=`${imgFolder}${name}-portrait.${ext}` type=`image/${ext}` media=`(orientation: portrait)`)
+		if webp
+			source(srcset=`${imgFolder}${name}.webp` type="image/webp" )
+		source(srcset=`${imgFolder}${name}.${ext}` type=`image/${ext}`)
+		img(src=`${imgFolder}${name}.${ext}` class=className alt=alt )&attributes(data)

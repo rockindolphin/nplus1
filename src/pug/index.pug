@@ -1,0 +1,57 @@
+include ./mixins/mixins.pug
+-
+	let pageTitle = 'N+1';
+
+doctype html
+html(lang="ru")
+	+head(pageTitle)
+	body.page
+		.page__body
+			header.page__header
+				.page__wrapper
+					.header__logo
+						icon-nplus1-logo
+					.header__wrapper
+						.header__nav.header__nav--top
+							nav.nav.nav--rubrics(aria-label='Rubrics menu')
+								.nav__wrapper(role='application')
+									ul.nav__menu
+										li.nav__item
+											a.nav__link(href='#', title='Астрономия') 
+												span Астрономия
+										li.nav__item
+											a.nav__link(href='#', title='Физика') 
+												span Физика
+										li.nav__item
+											a.nav__link(href='#', title='Биология') 
+												span Биология
+										li.nav__item
+											a.nav__link(href='#', title='Роботы и дроны') 
+												span Роботы и дроны
+							.header__search
+								form.form.form--header-search
+									input(type="text")
+									button.btn.btn--action(type="submit")
+										img(src="images/transparent_pixel.png", alt="helperImage")
+										icon-search
+									button.btn.btn--action(type="reset")
+										icon-search-close
+						.header__nav.header__nav--bottom
+							nav.nav.nav--themes(aria-label='Themes menu')
+								.nav__wrapper(role='application')
+									ul.nav__menu
+										li.nav__item
+											a.nav__link(href='#', title='Научные закрытия') 
+												span Научные закрытия
+										li.nav__item
+											a.nav__link(href='#', title='Краткий курс по литэкономии') 
+												span Краткий курс по литэкономии
+										li.nav__item
+											a.nav__link(href='#', title='Приключения «Хаябусы-2»') 
+												span Приключения «Хаябусы-2»
+										li.nav__item
+											a.nav__link(href='#', title='Интегрирование — искусство') 
+												span Интегрирование — искусство
+			main.page__main
+			footer.page__footer
+		script(src="js/app.js")

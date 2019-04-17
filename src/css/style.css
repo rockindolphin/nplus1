@@ -1,0 +1,94 @@
+@import 'vendor/normalize.css';
+@import 'variables.css';
+
+/*MIXINS*/
+@define-mixin addFont $name, $type: Regular, $weight: 400, $style: normal {
+	@font-face {
+		font-family: $name;
+		src: 	url('../fonts/$(name)$(type).woff2') format('woff2'),
+				url('../fonts/$(name)$(type).woff') format('woff');
+		font-style: $style;
+		font-weight: $(weight);
+		font-display: swap;
+	}
+}
+
+
+
+/* FONTS */
+@mixin addFont Roboto{}
+@mixin addFont Roboto, Medium, 500{}
+@mixin addFont Roboto, Light, 300{}
+@mixin addFont Roboto, Bold, 700{}
+
+/* OTHER */
+
+*{
+	box-sizing: border-box;
+	max-width: 100%;
+	word-break: break-word;
+	&:matches(:active,:focus){
+		
+	}
+	&:visited{
+		
+	}
+}
+
+html,
+body{
+	width: 100%;
+	min-height: 100%;
+	margin:  0;
+	padding: 0;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--black);
+	font-weight: var(--fw-normal);
+}
+
+
+a{
+	color: currentcolor;
+	&:hover,
+	&:active{
+
+	}
+}
+
+img{
+	max-width: 100%;
+}
+
+@supports(object-fit: contain){
+	img{
+		object-fit: contain;
+	}
+}
+
+:--all-headers{
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-weight: var(--fw-semi-bold);
+	color: inherit;
+}
+
+
+.scroll__measure{
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+
+a[href^='tel:']{
+	
+}
+
+a[href^='mailto:']{
+
+}
