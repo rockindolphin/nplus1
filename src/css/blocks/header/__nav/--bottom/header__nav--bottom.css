@@ -1,5 +1,16 @@
 
 .header__nav--bottom{
-	flex-grow: 0.3;
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		flex-grow: 0.3;	
+	}	
+	@media (--xl-viewport){
+		
+	}	
 }
 

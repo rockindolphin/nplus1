@@ -7,11 +7,23 @@ html(lang="ru")
 	+head(pageTitle)
 	body.page
 		.page__body
-			header.page__header
+			header.page__header.header(v-bind:class="{'page__header--open': menuOpen}")
 				.page__wrapper
-					.header__logo
-						icon-nplus1-logo
-					.header__wrapper
+					.header__wrapper.header__wrapper--mobile
+						.header__toggle.header__toggle--menu
+							button.btn.btn--action(@click="toggleMenu")
+								icon-menu
+						.header__logo
+							icon-nplus1-logo
+						.header__toggle.header__toggle--search
+							button.btn.btn--action(@click="toggleSearch")
+								icon-search
+						.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
+							form.form.form--header-search
+								input(type="text")
+								button.btn.btn--action
+									icon-search-close
+					.header__wrapper.header__wrapper--nav(v-bind:class="{'header__wrapper--open': menuOpen}")
 						.header__nav.header__nav--top
 							nav.nav.nav--rubrics(aria-label='Rubrics menu')
 								.nav__wrapper(role='application')
@@ -28,14 +40,10 @@ html(lang="ru")
 										li.nav__item
 											a.nav__link(href='#', title='Роботы и дроны') 
 												span Роботы и дроны
-							.header__search
-								form.form.form--header-search
-									input(type="text")
-									button.btn.btn--action(type="submit")
-										img(src="images/transparent_pixel.png", alt="helperImage")
-										icon-search
-									button.btn.btn--action(type="reset")
-										icon-search-close
+							.header__toggle.header__toggle--search
+								button.btn.btn--action
+									img(src="images/transparent_pixel.png", alt="helperImage")
+									icon-search
 						.header__nav.header__nav--bottom
 							nav.nav.nav--themes(aria-label='Themes menu')
 								.nav__wrapper(role='application')
@@ -52,6 +60,19 @@ html(lang="ru")
 										li.nav__item
 											a.nav__link(href='#', title='Интегрирование — искусство') 
 												span Интегрирование — искусство
+										//-
+											li.nav__item
+												a.nav__link(href='#', title='Научные закрытия') 
+													span Научные закрытия
+											li.nav__item
+												a.nav__link(href='#', title='Краткий курс по литэкономии') 
+													span Краткий курс по литэкономии
+											li.nav__item
+												a.nav__link(href='#', title='Приключения «Хаябусы-2»') 
+													span Приключения «Хаябусы-2»
+											li.nav__item
+												a.nav__link(href='#', title='Интегрирование — искусство') 
+													span Интегрирование — искусство
 			main.page__main
 			footer.page__footer
 		script(src="js/app.js")

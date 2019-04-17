@@ -4,6 +4,8 @@
 @custom-media --lg-viewport (width >= 992px);
 @custom-media --xl-viewport (width >= 1200px);
 
+@custom-media --ie-only screen and (-ms-high-contrast: active), (-ms-high-contrast: none);
+
 @custom-selector :--all-headers h1, h2, h3, h4, h5, h6;
 @custom-selector :--table-cell td, th;
 

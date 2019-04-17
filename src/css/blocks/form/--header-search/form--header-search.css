@@ -1,35 +1,23 @@
 
 .form--header-search{
-	display: flex;
-	width: 100%;
-	overflow: hidden;
-	& input{
-		display: none;
-	}
-	& .btn[type="reset"]{
-		display: none;
-	}
-	& .btn[type="submit"]{
-		background-color: var(--black);
-		color: var(--white);
-		position: relative;
-		height: 100%;
-		display: block;
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		display: flex;
 		width: 100%;
-		& img{
-			height: 100%;
-			width: auto;
-			max-width: 100vw;
-			display: block;
-			opacity: 0;
-			min-width: 68px;/*for non-webkit browsers*/
+		& input{
+			display: none;
 		}
-		& .icon__vue{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
+		& .btn{
+			display: none;
 		}
-	}
+	}	
+	@media (--xl-viewport){
+		
+	}	
 }
 

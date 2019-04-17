@@ -1,5 +1,26 @@
 
 .header__nav--top{
-	flex-grow: 0.7;
+	margin-top: -100vh;
+	will-change: margin-top;
+	transition: margin-top var(--anim-dur);
+	@nest .header__wrapper--open & {
+		margin-top: 10px;
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		margin-top: 0;	
+		flex-grow: 0.7;	
+		@nest .header__wrapper--open & {
+			margin-top: 0;
+		}
+	}	
+	@media (--xl-viewport){
+		
+	}
 }
 

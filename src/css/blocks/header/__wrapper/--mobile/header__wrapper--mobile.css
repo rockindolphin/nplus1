@@ -1,0 +1,26 @@
+
+.header__wrapper--mobile{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--orange);
+	padding-left: var(--page-gap);
+	padding-right: var(--page-gap);
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		width: auto;
+		padding: 0;
+		background-color: transparent;
+		margin-right: 1px;
+		margin-bottom: 1px;	
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+

@@ -1,16 +1,18 @@
 
-.nav--rubrics{
+.header__toggle--menu{
+	display: flex;
+	align-items: center;
 	@media (--sm-viewport){
 		
 	}	
 	@media (--md-viewport){
-		
+	
 	}	
 	@media (--lg-viewport){
-		
+		display: none;		
 	}	
 	@media (--xl-viewport){
 		
-	}	
+	}
 }
 

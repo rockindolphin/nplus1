@@ -1,0 +1,29 @@
+
+.page__header--open{
+	& > .page__wrapper{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-color: color(#000000 alpha(90%));
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		& > .page__wrapper{
+			height: auto;
+			flex-direction: row;
+			overflow: initial;
+			background-color: transparent;
+		}
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+

@@ -1,5 +1,16 @@
 
 .nav--themes{
-	font-size: 15px;
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		font-size: 15px;
+	}	
+	@media (--xl-viewport){
+		
+	}	
 }
 
