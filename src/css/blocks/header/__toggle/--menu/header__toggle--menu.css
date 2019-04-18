@@ -2,6 +2,10 @@
 .header__toggle--menu{
 	display: flex;
 	align-items: center;
+	&:hover,
+	&:focus{
+		color: var(--white);
+	}
 	@media (--sm-viewport){
 		
 	}	
@@ -9,7 +13,7 @@
 	
 	}	
 	@media (--lg-viewport){
-		display: none;		
+		display: none;
 	}	
 	@media (--xl-viewport){
 		

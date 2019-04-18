@@ -3,6 +3,7 @@
 	margin-top: -100vh;
 	will-change: margin-top;
 	transition: margin-top var(--anim-dur);
+	position: relative;
 	@nest .header__wrapper--open & {
 		margin-top: 10px;
 	}

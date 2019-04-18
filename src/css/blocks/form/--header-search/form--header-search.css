@@ -1,5 +1,41 @@
 
 .form--header-search{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	& input{
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		box-shadow: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 55px;
+		padding-right: 75px;
+	}
+	& .btn--action{
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		right: var(--page-gap);
+		transform: translateY(-50%);
+		&:hover{
+			color: var(--black);
+		}
+	}
+	& > .icon__wrapper{
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: var(--page-gap);
+		transform: translateY(-50%);
+	}
 	@media (--sm-viewport){
 		
 	}	
@@ -7,14 +43,7 @@
 		
 	}	
 	@media (--lg-viewport){
-		display: flex;
-		width: 100%;
-		& input{
-			display: none;
-		}
-		& .btn{
-			display: none;
-		}
+
 	}	
 	@media (--xl-viewport){
 		

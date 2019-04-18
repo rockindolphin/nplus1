@@ -6,6 +6,7 @@
 	background-color: var(--orange);
 	padding-left: var(--page-gap);
 	padding-right: var(--page-gap);
+	position: relative;
 	@media (--sm-viewport){
 		
 	}	

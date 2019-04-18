@@ -1,5 +1,40 @@
 
 .header__wrapper--search{
-	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	will-change: width;
+	transition: width var(--anim-dur);
+	color: var(--grey);
+	font-weight: var(--fw-light);
+	&.header__wrapper--open{
+		width: 100%;
+	}
+	@nest .header__nav--top &{
+		display: none;
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		display: none;
+		@nest .header__nav--top &{
+			display: block;
+			height: calc(100% - 1px);
+			right: 1px;
+			&.header__wrapper--open{
+				width: calc(100% - 1px);
+			}
+		}
+	}	
+	@media (--xl-viewport){
+		
+	}
 }
 

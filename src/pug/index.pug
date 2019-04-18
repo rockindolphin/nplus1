@@ -20,8 +20,9 @@ html(lang="ru")
 								icon-search
 						.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
 							form.form.form--header-search
-								input(type="text")
-								button.btn.btn--action
+								icon-search
+								input(type="text", placeholder="Найти")
+								button.btn.btn--action(@click.prevent="closeSearch")
 									icon-search-close
 					.header__wrapper.header__wrapper--nav(v-bind:class="{'header__wrapper--open': menuOpen}")
 						.header__nav.header__nav--top
@@ -40,8 +41,14 @@ html(lang="ru")
 										li.nav__item
 											a.nav__link(href='#', title='Роботы и дроны') 
 												span Роботы и дроны
+							.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
+								form.form.form--header-search
+									icon-search
+									input(type="text", placeholder="Найти")
+									button.btn.btn--action(@click.prevent="closeSearch")
+										icon-search-close
 							.header__toggle.header__toggle--search
-								button.btn.btn--action
+								button.btn.btn--action(@click="toggleSearch")
 									img(src="images/transparent_pixel.png", alt="helperImage")
 									icon-search
 						.header__nav.header__nav--bottom
@@ -60,19 +67,6 @@ html(lang="ru")
 										li.nav__item
 											a.nav__link(href='#', title='Интегрирование — искусство') 
 												span Интегрирование — искусство
-										//-
-											li.nav__item
-												a.nav__link(href='#', title='Научные закрытия') 
-													span Научные закрытия
-											li.nav__item
-												a.nav__link(href='#', title='Краткий курс по литэкономии') 
-													span Краткий курс по литэкономии
-											li.nav__item
-												a.nav__link(href='#', title='Приключения «Хаябусы-2»') 
-													span Приключения «Хаябусы-2»
-											li.nav__item
-												a.nav__link(href='#', title='Интегрирование — искусство') 
-													span Интегрирование — искусство
 			main.page__main
 			footer.page__footer
 		script(src="js/app.js")

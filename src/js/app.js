@@ -29,8 +29,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			closeSearch: function(){
 				this.searchOpen = false;
 			},
-			toggleSearch: function(){
+			toggleSearch: function(evt){
 				this.searchOpen ? this.closeSearch() : this.openSearch();
+				this.focusSearchInput();
+			},
+			focusSearchInput: function(){
+				let inputs = [...document.querySelectorAll('.header__wrapper--search input')];
+				inputs.map(input => {
+					input.focus();
+				});
 			}
 		},
 		components: nplus1Components			
