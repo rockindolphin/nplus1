@@ -1,4 +1,5 @@
 import 'core-js';
+import ResizeSensor from 'resize-sensor';
 import Vue from 'vue';
 import ScrollMagic from 'scrollmagic';
 import nplus1Components from './components/icons.js';
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 	window.app = app;
 
-	function initCssVariables(){
+	function getScrollbarWidth(){
 		//ширина скроллбара
 		let scrollMeasure = document.createElement('div');
 		scrollMeasure.classList.add('scroll__measure');
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var scrollbarWidth = scrollMeasure.offsetWidth - scrollMeasure.clientWidth;
 		document.querySelector(':root').style.setProperty('--scrollbar-width', scrollbarWidth+'px');
 	}
-	initCssVariables();
+	getScrollbarWidth();
 
 	//фоновые картинки
 	function initBackgroundImages(){
@@ -125,5 +126,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					.addTo(controller);	
 	}
 	initPageBackground();
+
+	function searchButtonWidth(){
+		let nav = document.querySelector('.header__nav--top'),
+			btn = document.querySelector('.header__wrapper--nav .header__toggle--search .btn');
+		
+		function setBtnMinWidth(){
+			let supportCustomProprties = window.CSS && CSS.supports('padding', 'var(--page-gap)');
+			if (supportCustomProprties){
+				document.querySelector(':root').style.setProperty('--nav-top-height', `${nav.offsetHeight}px`);
+			}else{
+				btn.style.width = `${nav.offsetHeight}px`;
+			}
+		}
+
+		if( btn && nav ){
+			setBtnMinWidth();
+			new ResizeSensor(nav, setBtnMinWidth);
+		}
+	}
+	searchButtonWidth();
+
 
 });

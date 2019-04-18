@@ -57,6 +57,7 @@
     "micromodal": "^0.3.2",
     "perfect-scrollbar": "^1.4.0",
     "plyr": "^3.4.8",
+    "resize-sensor": "0.0.6",
     "scrollmagic": "^2.0.6",
     "swiper": "^4.4.6",
     "vue": "^2.6.9",
