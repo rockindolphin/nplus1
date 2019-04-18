@@ -3,7 +3,8 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 0;
+	width: 1px;/*ie11*/
+	opacity: 0;
 	height: 100%;
 	overflow: hidden;
 	will-change: width;
@@ -12,6 +13,7 @@
 	font-weight: var(--fw-light);
 	&.header__wrapper--open{
 		width: 100%;
+		opacity: 1;
 	}
 	@nest .header__nav--top &{
 		display: none;

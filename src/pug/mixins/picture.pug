@@ -14,9 +14,10 @@ mixin picture(opts)
 			if webp
 				source(srcset=`${imgFolder}${name}-${size}.webp` type="image/webp" media=`(max-width: ${size}px) and (orientation: landscape)`)
 			source(srcset=`${imgFolder}${name}-${size}.${ext}` type=`image/${ext}` media=`(max-width: ${size}px) and (orientation: landscape)`)
-		if webp
-			source(srcset=`${imgFolder}${name}-portrait.webp` type="image/webp" media=`(orientation: portrait)`)
-		source(srcset=`${imgFolder}${name}-portrait.${ext}` type=`image/${ext}` media=`(orientation: portrait)`)
+		//-
+			if webp
+				source(srcset=`${imgFolder}${name}-portrait.webp` type="image/webp" media=`(orientation: portrait)`)
+			source(srcset=`${imgFolder}${name}-portrait.${ext}` type=`image/${ext}` media=`(orientation: portrait)`)
 		if webp
 			source(srcset=`${imgFolder}${name}.webp` type="image/webp" )
 		source(srcset=`${imgFolder}${name}.${ext}` type=`image/${ext}`)

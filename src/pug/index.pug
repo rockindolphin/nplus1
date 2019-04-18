@@ -7,6 +7,10 @@ html(lang="ru")
 	+head(pageTitle)
 	body.page
 		.page__body
+			.page__bg.page__bg--background
+				+picture({'src': 'bg.jpg', 'alt': 'bg', 'data':{'data-bg': 'true'}})
+			.page__bg.page__bg--foreground
+				+picture({'src': 'bg-2.jpg', 'alt': 'bg', 'data':{'data-bg': 'true'}})
 			header.page__header.header(v-bind:class="{'page__header--open': menuOpen}")
 				.page__wrapper
 					.header__wrapper.header__wrapper--mobile
@@ -68,5 +72,8 @@ html(lang="ru")
 											a.nav__link(href='#', title='Интегрирование — искусство') 
 												span Интегрирование — искусство
 			main.page__main
+				.page__wrapper
+					p(style="padding-bottom:1500px;")
+						|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos impedit sit fuga in officia, omnis rem. Sint molestias repudiandae aperiam tempore fuga atque sunt, autem quibusdam enim amet molestiae nisi!
 			footer.page__footer
 		script(src="js/app.js")

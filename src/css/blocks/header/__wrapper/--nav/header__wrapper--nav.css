@@ -27,6 +27,7 @@
 		
 	}	
 	@media (--lg-viewport){
+		width: 100%;
 		height: auto;
 		overflow: initial;
 		display: flex;
@@ -37,7 +38,6 @@
 			margin-right: 0;
 			padding-right: 0;
 			width: 100%;
-			max-width: 100%;
 		}
 	}	
 	@media (--xl-viewport){

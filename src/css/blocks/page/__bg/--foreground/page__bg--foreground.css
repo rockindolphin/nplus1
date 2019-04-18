@@ -1,0 +1,11 @@
+
+.page__bg--foreground{
+	z-index: -1;
+	opacity: 0;
+}
+
+@supports(filter: invert(1)){
+	.page__bg--foreground{
+		display: none;
+	}
+}

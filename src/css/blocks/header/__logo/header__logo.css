@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	background-color: var(--orange);
+	margin: 0 auto;
 	& .icon__vue{
 		width: 73px;
 		height: 53px;

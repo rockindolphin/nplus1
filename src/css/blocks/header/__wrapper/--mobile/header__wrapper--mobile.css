@@ -1,6 +1,7 @@
 
 .header__wrapper--mobile{
 	width: 100%;
+	flex-shrink: 0;
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--orange);
