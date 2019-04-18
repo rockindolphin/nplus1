@@ -13,14 +13,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		el: '.page__body',
 		data: {	
 			menuOpen: false,
-			searchOpen: false
+			searchOpen: false,
+			pageScrollLocked: false
 		},
 		methods: {
+			lockPageScroll: function(){
+				this.pageScrollLocked = true;
+				document.querySelector('.page').classList.add('page--noscroll');
+			},
+			unlockPageScroll: function(){
+				this.pageScrollLocked = false;
+				document.querySelector('.page').classList.remove('page--noscroll');
+			},
 			openMenu: function(){
 				this.menuOpen = true;
+				this.lockPageScroll();
 			},
 			closeMenu: function(){
 				this.menuOpen = false;
+				this.unlockPageScroll();
 			},
 			toggleMenu: function(){
 				this.menuOpen ? this.closeMenu() : this.openMenu();
@@ -113,6 +124,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					})
 					.addTo(controller);	
 	}
-	initPageBackground()
+	initPageBackground();
 
 });
