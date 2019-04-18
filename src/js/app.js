@@ -52,6 +52,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				inputs.map(input => {
 					input.focus();
 				});
+			},
+			toggleNavLine: function(evt){
+				let wrapper = evt.target.closest('.article__wrapper--line'),
+					items = [...wrapper.querySelectorAll('.nav__item')],
+					complete = false;
+				items.map((item,index) => {
+					if( !complete ){
+						if( [...item.classList].indexOf('nav__item--current') > -1 ){
+							item.classList.remove('nav__item--current');
+							let nextIndex = ++index % items.length;
+							items[nextIndex].classList.add('nav__item--current');
+							complete = true;
+						}
+					}
+				});
 			}
 		},
 		components: nplus1Components			

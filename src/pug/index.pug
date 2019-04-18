@@ -15,12 +15,12 @@ html(lang="ru")
 				.page__wrapper
 					.header__wrapper.header__wrapper--mobile
 						.header__toggle.header__toggle--menu
-							button.btn.btn--action(@click="toggleMenu")
+							button.btn.btn--action(@click.prevent="toggleMenu")
 								icon-menu
 						.header__logo
 							icon-nplus1-logo
 						.header__toggle.header__toggle--search
-							button.btn.btn--action(@click="toggleSearch")
+							button.btn.btn--action(@click.prevent="toggleSearch")
 								icon-search
 						.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
 							form.form.form--header-search
@@ -30,21 +30,7 @@ html(lang="ru")
 									icon-search-close
 					.header__wrapper.header__wrapper--nav(v-bind:class="{'header__wrapper--open': menuOpen}")
 						.header__nav.header__nav--top
-							nav.nav.nav--rubrics(aria-label='Rubrics menu')
-								.nav__wrapper(role='application')
-									ul.nav__menu
-										li.nav__item
-											a.nav__link(href='#', title='Астрономия') 
-												span Астрономия
-										li.nav__item
-											a.nav__link(href='#', title='Физика') 
-												span Физика
-										li.nav__item
-											a.nav__link(href='#', title='Биология') 
-												span Биология
-										li.nav__item
-											a.nav__link(href='#', title='Роботы и дроны') 
-												span Роботы и дроны
+							include partials/nav-rubrics.pug
 							.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
 								form.form.form--header-search
 									icon-search
@@ -52,27 +38,23 @@ html(lang="ru")
 									button.btn.btn--action(@click.prevent="closeSearch")
 										icon-search-close
 							.header__toggle.header__toggle--search
-								button.btn.btn--action(@click="toggleSearch")
+								button.btn.btn--action(@click.prevent="toggleSearch")
 									icon-search
 						.header__nav.header__nav--bottom
-							nav.nav.nav--themes(aria-label='Themes menu')
-								.nav__wrapper(role='application')
-									ul.nav__menu
-										li.nav__item
-											a.nav__link(href='#', title='Научные закрытия') 
-												span Научные закрытия
-										li.nav__item
-											a.nav__link(href='#', title='Краткий курс по литэкономии') 
-												span Краткий курс по литэкономии
-										li.nav__item
-											a.nav__link(href='#', title='Приключения «Хаябусы-2»') 
-												span Приключения «Хаябусы-2»
-										li.nav__item
-											a.nav__link(href='#', title='Интегрирование — искусство') 
-												span Интегрирование — искусство
+							include partials/nav-themes.pug
 			main.page__main
 				.page__wrapper
+					.article__wrapper.article__wrapper--line
+						.article__toggle
+							button.btn.btn--action(@click.prevent="toggleNavLine")
+								icon-guilsingl-right
+						include partials/nav-line.pug
 					p(style="padding-bottom:1500px;")
 						|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos impedit sit fuga in officia, omnis rem. Sint molestias repudiandae aperiam tempore fuga atque sunt, autem quibusdam enim amet molestiae nisi!
+					.article__wrapper.article__wrapper--line.theme--orange
+						.article__toggle
+							button.btn.btn--action(@click.prevent="toggleNavLine")
+								icon-guilsingl-right
+						include partials/nav-line.pug
 			footer.page__footer
 		script(src="js/app.js")

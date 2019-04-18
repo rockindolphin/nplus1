@@ -1,0 +1,31 @@
+
+.article__wrapper--line{
+	display: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	&.theme--orange{
+		& .article__toggle{
+			background-color: var(--orange);
+		}
+	}
+	& .article__toggle{
+		background-color: var(--bermuda);
+		margin-right: 1px;
+		& .btn--action{
+			min-width: 30px;
+		}
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		display: flex;
+	}	
+	@media (--xl-viewport){
+		
+	}	
+}
+

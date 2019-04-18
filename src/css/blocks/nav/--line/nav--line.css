@@ -1,0 +1,48 @@
+
+.nav--line{
+	font-size: 15px;
+	color: var(--tuna);
+	max-width: calc(100vw - var(--page-gap)*2 - 30px - var(--scrollbar-width) - 2px);
+	& .nav__menu{
+		list-style: none;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		display: flex;
+	}
+	& .nav__item{
+		display: none;
+	}
+	& .nav__item--current{
+		display: block;
+	}
+	& .nav__link{
+		text-decoration: none;
+		display: block;
+	}
+	& .article__content{
+		display: flex;
+	}
+	@nest .theme--orange & {
+		& .article__theme,
+		& .article__title{
+			background-color: var(--orange);
+		}
+	}
+	& .article__theme,
+	& .article__title{
+		display: inline-block;
+		background-color: var(--bermuda);
+		padding: 11px 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;	
+	}
+	& .article__theme{
+		margin-right: 1px;
+	}
+	& .article__title{
+
+	}
+}
+
