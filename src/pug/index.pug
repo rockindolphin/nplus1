@@ -7,54 +7,13 @@ html(lang="ru")
 	+head(pageTitle)
 	body.page
 		.page__body
-			.page__bg.page__bg--background
-				+picture({'src': 'bg.jpg', 'alt': 'bg', 'data':{'data-bg': 'true'}})
-			.page__bg.page__bg--foreground
-				+picture({'src': 'bg-2.jpg', 'alt': 'bg', 'data':{'data-bg': 'true'}})
-			header.page__header.header(v-bind:class="{'page__header--open': menuOpen}")
-				.page__wrapper
-					.header__wrapper.header__wrapper--mobile
-						.header__toggle.header__toggle--menu
-							button.btn.btn--action(@click.prevent="toggleMenu")
-								icon-menu
-						.header__logo
-							icon-nplus1-logo
-						.header__toggle.header__toggle--search
-							button.btn.btn--action(@click.prevent="toggleSearch")
-								icon-search
-						.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
-							form.form.form--header-search
-								icon-search
-								input(type="text", placeholder="Найти")
-								button.btn.btn--action(@click.prevent="closeSearch")
-									icon-search-close
-					.header__wrapper.header__wrapper--nav(v-bind:class="{'header__wrapper--open': menuOpen}")
-						.header__nav.header__nav--top
-							include partials/nav-rubrics.pug
-							.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
-								form.form.form--header-search
-									icon-search
-									input(type="text", placeholder="Найти")
-									button.btn.btn--action(@click.prevent="closeSearch")
-										icon-search-close
-							.header__toggle.header__toggle--search
-								button.btn.btn--action(@click.prevent="toggleSearch")
-									icon-search
-						.header__nav.header__nav--bottom
-							include partials/nav-themes.pug
+			include partials/background.pug
+			include partials/header.pug
 			main.page__main
 				.page__wrapper
-					.article__wrapper.article__wrapper--line
-						.article__toggle
-							button.btn.btn--action(@click.prevent="toggleNavLine")
-								icon-guilsingl-right
-						include partials/nav-line.pug
+					include partials/featuder_top.pug
 					p(style="padding-bottom:1500px;")
 						|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos impedit sit fuga in officia, omnis rem. Sint molestias repudiandae aperiam tempore fuga atque sunt, autem quibusdam enim amet molestiae nisi!
-					.article__wrapper.article__wrapper--line.theme--orange
-						.article__toggle
-							button.btn.btn--action(@click.prevent="toggleNavLine")
-								icon-guilsingl-right
-						include partials/nav-line.pug
+					include partials/featuder_bottom.pug
 			footer.page__footer
 		script(src="js/app.js")

@@ -1,0 +1,28 @@
+mixin navArticle(item)
+	-
+		let title = item.title || 'article title !!! ',
+			theme = item.theme || 'article theme !!! '
+	span.article__content
+		span.article__theme #{theme}
+		span.article__title #{title}
+
+mixin nav(data)
+	-
+		let label = data.label || 'insert nav title here',
+			customClass = data.className || '',
+			navClass = {class: `nav ${customClass}`};
+	nav(aria-label='Articles')&attributes(navClass)
+		.nav__wrapper(role='application')
+			ul.nav__menu
+				each item in data.items
+					-
+						let itemClass = {class: item.current ? 'nav__item nav__item--current' : 'nav__item'},
+							link = item.link || '#',
+							title = item.title || '#';
+					li()&attributes(itemClass)
+						a.nav__link(href=link, title=title)
+							if data.mixin
+								if data.mixin === 'navArticles'
+									+navArticle(item)
+							else
+								span #{title}

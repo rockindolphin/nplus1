@@ -1,0 +1,31 @@
+header.page__header.header(v-bind:class="{'page__header--open': menuOpen}")
+	.page__wrapper
+		.header__wrapper.header__wrapper--mobile
+			.header__toggle.header__toggle--menu
+				button.btn.btn--action(@click.prevent="toggleMenu")
+					icon-menu
+			.header__logo
+				icon-nplus1-logo
+			.header__toggle.header__toggle--search
+				button.btn.btn--action(@click.prevent="toggleSearch")
+					icon-search
+			.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
+				form.form.form--header-search
+					icon-search
+					input(type="text", placeholder="Найти")
+					button.btn.btn--action(@click.prevent="closeSearch")
+						icon-search-close
+		.header__wrapper.header__wrapper--nav(v-bind:class="{'header__wrapper--open': menuOpen}")
+			.header__nav.header__nav--top
+				+nav(nav_rubrics)
+				.header__wrapper.header__wrapper--search(v-bind:class="{'header__wrapper--open': searchOpen}")
+					form.form.form--header-search
+						icon-search
+						input(type="text", placeholder="Найти")
+						button.btn.btn--action(@click.prevent="closeSearch")
+							icon-search-close
+				.header__toggle.header__toggle--search
+					button.btn.btn--action(@click.prevent="toggleSearch")
+						icon-search
+			.header__nav.header__nav--bottom
+				+nav(nav_themes)
