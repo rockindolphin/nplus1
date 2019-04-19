@@ -4,7 +4,7 @@ header.page__header.header(v-bind:class="{'page__header--open': menuOpen}")
 			.header__toggle.header__toggle--menu
 				button.btn.btn--action(@click.prevent="toggleMenu")
 					icon-menu
-			.header__logo
+			a.header__logo(href="pages.home")
 				icon-nplus1-logo
 			.header__toggle.header__toggle--search
 				button.btn.btn--action(@click.prevent="toggleSearch")

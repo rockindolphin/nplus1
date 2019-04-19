@@ -1,0 +1,29 @@
+
+.nav--socials{
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	& .nav__menu{
+		display: flex;
+	}
+	& .nav__item{
+		&:not(:last-of-type){
+			margin-right: 10px;
+		}
+	}
+	& .nav__link{
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		background-color: color(#ffffff alpha(20%));
+		border-radius: 3px;
+		&:hover{
+			background-color: color(#ffffff alpha(30%));
+			color: var(--orange);
+		}
+	}
+}
+

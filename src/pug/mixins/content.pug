@@ -1,4 +1,7 @@
 -
+	let pages = {
+		home: 'index.html',
+	}
 	let nav_themes = {
 		label: 'Themes menu',
 		className: 'nav--themes',
@@ -69,3 +72,68 @@
 			}
 		]
 	}	
+
+	let nav_footer = {
+		label: 'Footer menu',
+		className: 'nav--footer',
+		items: [
+			{
+				title: 'О Нас'
+			},
+			{
+				title: 'Рекламодателям'
+			},
+			{
+				title: 'Наши Материалы'
+			},
+			{
+				title: 'Вакансии'
+			},
+			{
+				title: 'Сложность'
+			}
+		]
+	}
+
+	let nav_socials = {
+		label: 'Socials menu',
+		className: 'nav--socials',
+		mixin: 'navSocials',
+		items: [
+			{
+				title: 'Telegram',
+				icon: 'telegram',
+				link: 'https://t.me/nplusone'
+			},
+			{
+				title: 'Vkontakte',
+				icon: 'vkontakte',
+				link: 'http://vk.com/nplusone'
+			},
+			{
+				title: 'Facebook',
+				icon: 'facebook',
+				link: 'https://www.facebook.com/nplusone'
+			},
+			{
+				title: 'Twitter',
+				icon: 'twitter',
+				link: 'https://twitter.com/nplusodin'
+			},
+			{
+				title: 'Odnoklassniki',
+				icon: 'odnoklassniki',
+				link: 'https://ok.ru/nplus1'
+			},
+			{
+				title: 'Soundcloud',
+				icon: 'soundcloud',
+				link: 'https://soundcloud.com/nplus_1'
+			},
+			{
+				title: 'Rss',
+				icon: 'rss',
+				link: 'https://nplus1.ru/rss'
+			}
+		]
+	}

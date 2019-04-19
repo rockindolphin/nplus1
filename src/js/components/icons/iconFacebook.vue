@@ -1,0 +1,18 @@
+<template>
+	<icon-template
+		:width="9"
+		:height="17"
+		name="Facebook"
+	>
+		<path d="M2.613 17V9.398H0V6.375h2.613V3.996C2.613 1.406 4.238 0 6.605 0 7.742 0 8.72.082 9 .121v2.7H7.355c-1.289 0-1.535.6-1.535 1.472v2.082h2.907l-.399 3.023H5.82V17" fill="currentColor"/>
+	</icon-template>
+</template>
+
+<script>
+	import iconTemplate from '../iconTemplate.vue';
+	export default {
+		components: {
+			iconTemplate
+		}
+	}
+</script>

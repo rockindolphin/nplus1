@@ -1,0 +1,7 @@
+
+.link{
+	&.theme--white{
+		color: var(--white);
+	}
+}
+

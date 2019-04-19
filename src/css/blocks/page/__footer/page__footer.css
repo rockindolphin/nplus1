@@ -1,5 +1,37 @@
 
 .page__footer{
 	width: 100%;
+	color: var(--white);
+	font-size: 14px;
+	& > .page__wrapper{
+		padding: var(--page-gap);
+		background-color: var(--black);
+	}
+	& .footer__wrapper{
+
+	}
+	& .footer__socials{
+		display: none;
+	}
+	@media (--sm-viewport){
+		& > .page__wrapper{
+			@mixin cssLock padding, sm, lg, 15, 40{} 
+		}
+		& .footer__socials{
+			display: block;
+		}
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		& > .page__wrapper{
+			display: flex;
+			padding: 40px;
+		}
+	}	
+	@media (--xl-viewport){
+		
+	}
 }
 

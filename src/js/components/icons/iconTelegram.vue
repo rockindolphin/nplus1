@@ -1,0 +1,18 @@
+<template>
+	<icon-template
+		:width="16"
+		:height="17"
+		name="Telegram"
+	>
+		<path d="M8 .266C3.582.266 0 3.953 0 8.5c0 4.547 3.582 8.234 8 8.234s8-3.687 8-8.234C16 3.953 12.418.266 8 .266zm3.93 5.64l-1.313 6.367c-.097.454-.36.563-.722.352l-2-1.52-.965.957c-.106.11-.2.204-.403.204l.141-2.094 3.707-3.45c.16-.144-.035-.226-.25-.081L5.547 9.609 3.57 8.977c-.43-.141-.437-.442.09-.657l7.715-3.062c.355-.133.672.09.555.648zm0 0" fill="currentColor"/>
+	</icon-template>
+</template>
+
+<script>
+	import iconTemplate from '../iconTemplate.vue';
+	export default {
+		components: {
+			iconTemplate
+		}
+	}
+</script>

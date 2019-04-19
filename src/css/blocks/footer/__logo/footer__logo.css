@@ -1,23 +1,26 @@
 
-.header__logo{
+.footer__logo{
+	display: block;
 	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	background-color: var(--orange);
-	margin: 0 auto;
+	margin-bottom: 20px;
 	& .icon__vue{
 		width: 73px;
 		height: 53px;
 		color: var(--black);
-		fill: var(--orange);
+		fill:  var(--white);
 	}
 	@media (--sm-viewport){
-		
+		& .icon__vue{
+			@mixin cssLock width, sm, lg, 73, 185{} 
+			@mixin cssLock height, sm, lg, 53, 135{} 
+		}	
 	}	
 	@media (--md-viewport){
 		
 	}	
 	@media (--lg-viewport){
+		margin-bottom: 0;
+		margin-right: 40px;
 		& .icon__vue{
 			width: 185px;
 			height: 135px;
@@ -25,6 +28,6 @@
 	}	
 	@media (--xl-viewport){
 		
-	}
+	}	
 }
 

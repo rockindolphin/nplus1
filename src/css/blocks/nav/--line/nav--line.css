@@ -4,10 +4,6 @@
 	color: var(--tuna);
 	max-width: calc(100vw - var(--page-gap)*2 - 30px - var(--scrollbar-width) - 2px);
 	& .nav__menu{
-		list-style: none;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 0;
 		display: flex;
 	}
 	& .nav__item{

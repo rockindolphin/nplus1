@@ -1,10 +1,15 @@
 mixin navArticle(item)
 	-
 		let title = item.title || 'article title !!! ',
-			theme = item.theme || 'article theme !!! '
+			theme = item.theme || 'article theme !!! ';
 	span.article__content
 		span.article__theme #{theme}
 		span.article__title #{title}
+
+mixin navSocial(item)
+	-
+		let iconName = item.icon || 'social-default';
+	#{`icon-${iconName}`}
 
 mixin nav(data)
 	-
@@ -24,5 +29,7 @@ mixin nav(data)
 							if data.mixin
 								if data.mixin === 'navArticles'
 									+navArticle(item)
+								if data.mixin === 'navSocials'
+									+navSocial(item)
 							else
 								span #{title}

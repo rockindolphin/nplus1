@@ -1,0 +1,23 @@
+
+.footer__copy{
+	color: var(--gunsmoke);
+	line-height: 1.3;
+	font-size: 12px;
+	& p{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	@media (--sm-viewport){
+		@mixin cssLock font-size, sm, lg, 12, 14{} 
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		font-size: 14px;
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+
