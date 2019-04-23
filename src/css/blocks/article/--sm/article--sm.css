@@ -1,0 +1,40 @@
+
+.article--sm{
+	min-height: 445px;
+	font-size: 18px;
+	&:hover{
+		background-color: var(--orange);
+	}
+	& .article__content{
+		display: block;
+		padding: var(--page-gap);
+	}
+	& .article__title{
+		font-size: 1em;
+	}
+	& .article__taxonomies{
+		font-size: 0.83em;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+	& .article__excerpt{
+		display: block;
+		font-family: PlayfairDisplay;
+		padding-top: 15px;
+		border-top: 1px dotted;
+		border-color: var(--black);
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+

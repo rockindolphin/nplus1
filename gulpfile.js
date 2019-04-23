@@ -35,8 +35,10 @@ const config = {
 		html:  'src/pug/*.pug',
 		css: [
 			'src/css/style.css',
+			'src/css/style_scss.css',
 			'src/css/blocks/**/*.css'
 		],
+		scss: 'src/css/style_scss.scss',				
 		js: 'src/js/*.js',				
 		fonts: 'src/fonts/*.*',	
 		images: [
@@ -48,6 +50,7 @@ const config = {
 	dist: {
 		html:  './dist',
 		css: './dist/css',
+		scss: 'src/css/',	
 		js: './dist/js',
 		fonts: './dist/fonts',
 		manifest: './dist/manifest',
@@ -56,6 +59,10 @@ const config = {
 	watch: {
 		html:  'src/pug/*.pug',
 		css: 'src/css/**/*.css',
+		scss: [
+			'src/css/style_scss.scss',
+			'src/css/bootstrap-4.3.1/scss/**/*.scss',
+		],		
 		js: 'src/js/*.js',
 		fonts: 'src/fonts/*.*',
 		images: [
@@ -239,6 +246,13 @@ gulp.task('css', [], ()=>{
 	)	
 });
 
+gulp.task('scss', [], ()=>{
+	scss(
+		config.src.scss,
+		config.dist.scss
+	)	
+});
+
 gulp.task('js', [], ()=>{
 	return js(
 		config.src.js,
@@ -292,7 +306,7 @@ gulp.task('clean', [], ()=>{
 
 gulp.task('watch', function() { 
 
-	['css', 'js', 'fonts', 'images'].map((task)=>{
+	['css', 'scss', 'js', 'fonts', 'images'].map((task)=>{
 		let watcher = chokidar.watch( config.watch[task], { ignoreInitial: true } ); 
 		watcher.on('change', (file) => { gulp.start(task) }); 
 		watcher.on('add', (file) => { gulp.start(task) }); 
@@ -308,6 +322,7 @@ gulp.task( 'build', ['clean'], function(){
 	runSequence(
 		'html',
 		'css',
+		'scss',
 		'js',
 		'fonts',
 		'manifest',

@@ -1,6 +1,7 @@
 
 .page__header{
 	width: 100%;
+	margin-bottom: var(--page-gap);
 	& > .page__wrapper{
 		background-color: transparent;
 		transition: background-color var(--anim-dur);

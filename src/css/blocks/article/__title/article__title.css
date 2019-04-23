@@ -1,5 +1,18 @@
 
 .article__title{
-
+	display: block;
+	font-weight: var(--fw-normal);
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		
+	}	
+	@media (--xl-viewport){
+		
+	}
 }
 

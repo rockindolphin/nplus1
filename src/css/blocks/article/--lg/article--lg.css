@@ -1,0 +1,43 @@
+
+.article--lg{
+	min-height: 450px;
+	font-size: 17px;
+	&:hover{
+		& .wrapper{
+			background-color: var(--orange);
+		}
+	}
+	& .article__content{
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	& .article__title{
+		font-size: 1em;
+	}
+	& .article__pic{
+		@mixin articlePic
+	}
+	& .wrapper{
+		max-width: 300px;
+		padding: var(--page-gap);
+		background-color: var(--white);
+		transition: background-color var(--anim-dur);
+		&:hover{
+			background-color: var(--orange);
+		}
+	}
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+

@@ -1,8 +1,7 @@
 
 .article__wrapper--line{
 	display: none;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: var(--page-gap);
 	&.theme--orange{
 		& .article__toggle{
 			background-color: var(--orange);

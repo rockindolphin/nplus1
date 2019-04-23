@@ -1,0 +1,17 @@
+
+.article__content{
+	width: 100%;
+	@media (--sm-viewport){
+		
+	}	
+	@media (--md-viewport){
+		
+	}	
+	@media (--lg-viewport){
+		
+	}	
+	@media (--xl-viewport){
+		
+	}
+}
+

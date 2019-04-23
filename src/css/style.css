@@ -1,5 +1,6 @@
 @import 'vendor/normalize.css';
 @import 'variables.css';
+@import 'style_scss.css';
 
 /*MIXINS*/
 @define-mixin addFont $name, $type: Regular, $weight: 400, $style: normal {
@@ -20,6 +21,10 @@
 @mixin addFont Roboto, Medium, 500{}
 @mixin addFont Roboto, Light, 300{}
 @mixin addFont Roboto, Bold, 700{}
+
+@mixin addFont PlayfairDisplay{}
+@mixin addFont PlayfairDisplay Italic, 400, italic{}
+@mixin addFont PlayfairDisplay Bold, 700{}
 
 /* OTHER */
 

@@ -1,0 +1,66 @@
+mixin article(size, article)
+	case size
+		when 'xs'
+			+article-xs(article)
+		when 'sm'
+			+article-sm(article)
+		when 'md'
+			+article-md(article)
+		when 'lg'
+			+article-lg(article)
+		when 'xl'
+			+article-xl(article)
+
+mixin article-xs(article)
+	article.article.article--xs
+		a.article__content.article__link(href=article.link)
+			time.article__date #{article.date}
+			h6.article__title #{article.title}
+
+mixin article-sm(article)
+	article.article.article--sm
+		a.article__content.article__link(href=article.link)
+			span.article__taxonomies
+				span.taxonomy.taxonomy--rubrics
+					span.taxonomy__item
+						object(type="asd/dsf")
+							a.article__link(href=article.rubrics[0].link) #{article.rubrics[0].title}
+				span /
+				span.taxonomy.taxonomy--themes
+					span.taxonomy__item
+						object(type="asd/dsf")
+							a.article__link(href=article.themes[0].link) #{article.themes[0].title}
+			span.article__author
+				span.author__pic
+					img(src=article.author.pic, alt=article.author.name)
+				span.author__wrapper
+					span.author__name #{article.author.name}
+					span.author__role #{article.author.role}
+			span.article__excerpt #{article.excerpt}
+
+mixin article-md(article)
+	article.article.article--md
+		a.article__content.article__link(href=article.link)
+			span.article__pic
+				img(src=article.pic, alt=article.title, data-bg="true")
+			span.article__taxonomies
+				span.taxonomy.taxonomy--rubrics
+					each rubric in article.rubrics
+						span.taxonomy_-item
+							object(type="asd/dsf")
+								a.article__link(href=rubric.link) #{rubric.title}
+			span.wrapper
+				h3.article__title #{article.title}
+				span.article__excerpt #{article.excerpt}
+
+mixin article-lg(article)
+	article.article.article--lg
+		a.article__content.article__link(href=article.link)
+			span.article__pic
+				img(src=article.pic, alt=article.title, data-bg="true")
+			span.wrapper
+				time.article__date #{article.date}
+				h2.article__title #{article.title}
+
+mixin article-xl(article)
+	article.article.article--xl Reserved

@@ -1,4 +1,5 @@
 node_modules/
 dist/
+src/css/style_scss.css
 
 package-lock.json
